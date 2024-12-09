@@ -212,3 +212,11 @@ li.CodeMirror-hint-active {
 .testRunSql {
   margin-top: 10px;
 }
+
+.modal-backdrop {
+  z-index: 1050 !important;
+}
+
+.modal {
+  z-index: 1076 !important;
+}
