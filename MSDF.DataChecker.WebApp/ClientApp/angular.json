@@ -28,7 +28,6 @@
               "src/styles.css",
               "node_modules/ngx-toastr/toastr.css",
               "node_modules/codemirror/addon/hint/show-hint.css",
-              "node_modules/ionicons/dist/scss/ionicons.scss",
               "node_modules/ngx-spinner/animations/line-scale-party.css"
             ],
             "scripts": [],
