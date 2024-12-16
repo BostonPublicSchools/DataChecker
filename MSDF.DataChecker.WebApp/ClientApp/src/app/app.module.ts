@@ -29,6 +29,7 @@ import { RuleExecutionComponentComponent } from './rule-execution-component/rule
 import { TagsComponent } from './tags/tags.component'
 import { JobsComponent } from './jobs/jobs.component'
 import { TagsSearchComponent } from './tags-search/tags-search.component'
+import { QuillModule } from "ngx-quill";
 
 
 
@@ -67,7 +68,7 @@ const routes: Routes = [{ path: "", component: HomeComponent, pathMatch: "full" 
     NgbModule,
     CodemirrorModule,
     TagInputModule,
-
+    QuillModule.forRoot(),
     NgMultiSelectDropDownModule.forRoot()
   ],
   providers: [
