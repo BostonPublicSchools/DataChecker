@@ -8,7 +8,7 @@ import { Category } from '../models/category.model';
 import { DatabaseEnvironment } from "../models/databaseEnvironment.model";
 import { UtilService } from '../services/util.service';
 import { IDropdownSettings } from 'ng-multiselect-dropdown';
-import {format} from "sql-formatter";
+import {formatDialect, transactsql} from "sql-formatter";
 
 @Component({
   selector: 'tags-search',
@@ -248,7 +248,7 @@ export class TagsSearchComponent implements OnInit {
         this.sqlOptions.hintOptions.tables = JSON.parse(result.mapTables);
     });
 
-    ruleChild.diagnosticSql = format(ruleChild.diagnosticSql);
+    ruleChild.diagnosticSql = formatDialect(ruleChild.diagnosticSql,{dialect: transactsql});
 
     this.newRule = Object.assign({}, ruleChild);
     this.newRule.tags = Object.assign([], ruleChild.tags);

@@ -4,7 +4,7 @@ import { ToastrService } from "ngx-toastr";
 import { ApiService } from "../services/api.service";
 import { NgbModal } from "@ng-bootstrap/ng-bootstrap";
 import { Rule } from "../models/rule.model";
-import {format} from "sql-formatter";
+import {formatDialect, transactsql} from "sql-formatter";
 import { DatabaseEnvironment } from "../models/databaseEnvironment.model";
 import { Tag } from "../models/tag.model";
 import { User } from "../models/user.model";
@@ -411,7 +411,7 @@ export class NavCollectionComponent implements OnInit {
         this.sqlOptions.hintOptions.tables = JSON.parse(result.mapTables);
     });
 
-    ruleChild.diagnosticSql = format(ruleChild.diagnosticSql);
+    ruleChild.diagnosticSql = formatDialect(ruleChild.diagnosticSql,{dialect: transactsql});
     ruleChild.collectionName = this.category.name;
     ruleChild.containerName = categoryChild.name;
 

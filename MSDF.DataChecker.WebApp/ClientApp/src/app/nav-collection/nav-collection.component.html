@@ -394,7 +394,8 @@
             <div class="col">
               <div class="form-group">
                 <label for="resolution">Resolution :</label>
-                <textarea id="resolution" name="resolution" class="form-control" required [(ngModel)]="newRule.resolution" #resolution="ngModel"></textarea>
+                <quill-editor id="resolution" name="resolution" [(ngModel)]="newRule.resolution" #resolution="ngModel" 
+                [styles]="{'min-height': '200px'}"></quill-editor>
               </div>
             </div>
           </div>

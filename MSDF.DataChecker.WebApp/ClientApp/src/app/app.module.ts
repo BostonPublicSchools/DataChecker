@@ -68,7 +68,15 @@ const routes: Routes = [{ path: "", component: HomeComponent, pathMatch: "full" 
     NgbModule,
     CodemirrorModule,
     TagInputModule,
-    QuillModule.forRoot(),
+    QuillModule.forRoot({
+      modules:{
+        syntax: false,
+        toolbar:[
+          ['clean'],
+          ['link'] 
+        ]  
+      }
+    }),
     NgMultiSelectDropDownModule.forRoot()
   ],
   providers: [

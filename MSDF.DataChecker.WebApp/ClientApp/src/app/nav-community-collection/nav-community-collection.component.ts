@@ -3,7 +3,7 @@ import { NgbModal } from "@ng-bootstrap/ng-bootstrap";
 import { ToastrService } from "ngx-toastr";
 import { ApiService } from "../services/api.service";
 import { Category } from "../models/category.model";
-import {format} from "sql-formatter";
+import {formatDialect, transactsql} from "sql-formatter";
 
 @Component({
   selector: "nav-community-collection",
@@ -84,7 +84,7 @@ export class NavCommunityCollectionComponent implements OnInit {
 
   showRule(rule, ruleCommunityContent) {
     this.newRule = rule;
-    this.newRule.diagnosticSql = format(this.newRule.diagnosticSql);
+    this.newRule.diagnosticSql = formatDialect(this.newRule.diagnosticSql,{dialect: transactsql});
     this.modalService.open(ruleCommunityContent, {
       ariaLabelledBy: "modal-basic-title",
       size: "xl",

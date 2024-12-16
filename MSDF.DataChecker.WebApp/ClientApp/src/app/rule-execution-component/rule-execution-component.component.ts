@@ -4,7 +4,7 @@ import { Rule } from "../models/rule.model";
 import { ToastrService } from "ngx-toastr";
 import { NgbModal } from "@ng-bootstrap/ng-bootstrap";
 import * as moment from "moment";
-import {format} from "sql-formatter";
+import {formatDialect, transactsql} from "sql-formatter";
 import { DatabaseEnvironment } from "../models/databaseEnvironment.model";
 import { ValidationRun } from "../models/validationRun.model";
 
@@ -130,7 +130,7 @@ export class RuleExecutionComponentComponent implements OnInit {
   }
 
   loadPopover(result) {
-    this.executedSql = format(result.executedSql);
+    this.executedSql = formatDialect(result.executedSql,{dialect: transactsql});
   }
 
   copyDiagnostic(result: any) {

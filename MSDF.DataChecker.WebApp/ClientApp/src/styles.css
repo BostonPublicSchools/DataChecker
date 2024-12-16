@@ -2,6 +2,7 @@
 @import "~codemirror/lib/codemirror";
 @import "~codemirror/theme/material";
 
+
 html,
 body {
   /* height: 100%;
@@ -219,4 +220,8 @@ li.CodeMirror-hint-active {
 
 .modal {
   z-index: 1076 !important;
+}
+
+.ql-editor{
+  height: 250px;
 }
