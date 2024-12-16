@@ -31,7 +31,7 @@
     "angular2-fontawesome": "^5.2.1",
     "bootstrap": "^4.6.2",
     "ionicons": "^7.4.0",
-    "jquery": "^3.7.1",
+    "jquery": "^3.5.1",
     "moment": "^2.30.1",
     "ng-multiselect-dropdown": "^1.0.0",
     "ngx-chips": "^3.0.0",
